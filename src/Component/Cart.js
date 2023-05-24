@@ -1,4 +1,6 @@
 
+import React from "react";
+import ReactStars from "react-rating-stars-component";
 const Cart = ({e}) => {
     return(
         <div>
@@ -10,6 +12,15 @@ const Cart = ({e}) => {
                   </div>
                   <div class="card-body">
                   <h2>{e.name}</h2>
+                  
+            <ReactStars
+              count={5}
+              size={15}
+              activeColor="#ffd700"
+              value={e.rating}
+              edit={false}
+            />,
+          
                   <h2>{e.seasons}</h2>
                   <p>{e.description}</p>
                   </div>
